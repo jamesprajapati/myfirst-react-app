@@ -4,8 +4,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <h1>Hello I am Gaurav</h1>
-     <img src={Avatar} alt="Avtar" />
+           <h2>
+             
+           </h2>
+          <img src={Avatar} alt="Avtar" className="center"/>
+          <h1>Hello I am Gaurav Prajapati</h1>
     </div>
   );
 }
