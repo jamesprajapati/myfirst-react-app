@@ -15,9 +15,12 @@ function App() {
          </Switch>
       </Router>    
       <center>
-          <img src={Avatar} alt="Avtar" className="center"/>
+        <div>
+          <img src={Avatar} alt="Avtar"/>
           <h1>Hello I am Gaurav Prajapati</h1>
+        </div>
       </center>
+      
     
     </>
   
