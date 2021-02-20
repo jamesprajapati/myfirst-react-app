@@ -5,37 +5,39 @@ import { Link } from 'react-router-dom'
 import { SidebarData } from "./SidebarData";
 import Avatar from './wenzix.png'
 import "./Navbar.css";
+import { IoMdColorFill } from 'react-icons/io';
 
 function Navbar() {
-    const [sidebar,setSidebar]= useState(false)
-
-    const showSidebar = () => setSidebar(!sidebar)
     return (
-        <>
+        
          <div className="navbar">
-         <div className='nav-menu active'>
-             <div className="nav-profile">
-                 <img src={Avatar} className="nav-profile-image"alt="Gaurav"/>
-                 </div>
-                 <div>
+             <div className="navbar-profile">
+                 <img src={Avatar} className="navbar-profile-img" alt="Gaurav"/>
+             </div>
+             <div className="navbar-text-profile">
                  <h1>Gaurav Prajapati</h1>
-                 </div>
-             <ul className="nav-menu-items">
-                {SidebarData.map((item, index)=>{
-                    return(
-                        <li key={index} className={item.cName}>
-                            <Link to={item.path}>
-                                {item.icon}
-                                <span>{item.title}</span> 
-                            </Link>
-                        </li>
-                    )
-                })}
-             </ul>
-         </div>
-         </div>
-            
-        </>
+             </div>
+             <div className='nav-menu'>
+                 <ul className="nav-menu-items">
+                      {SidebarData.map((item, index)=>{
+                          return(
+                             <li key={index} className={item.cName}>
+                                   <Link to={item.path}>
+                                         {item.icon}
+                                        <span>{item.title}</span> 
+                                    </Link>
+                            </li>
+                            )       
+                        })}
+                    </ul>
+                    </div>
+                    <div ClassName="navbar-social-icons">
+                        <AiIcons.AiFillGithub><Link to="#"/></AiIcons.AiFillGithub>
+                        <AiIcons.AiOutlineInstagram/>
+                        <AiIcons.AiFillLinkedin/>
+                    </div>
+            </div>
+        
     )
 }
 

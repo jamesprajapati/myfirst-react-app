@@ -16,8 +16,8 @@ function App() {
       </Router>    
       <center>
         <div>
-          <img src={Avatar} alt="Avtar"/>
-          <h1>Hello I am Gaurav Prajapati</h1>
+        { //<h1>Hello I am Gaurav Prajapati</h1>/
+        }
         </div>
       </center>
       
